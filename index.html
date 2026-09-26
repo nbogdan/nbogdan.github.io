@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bogdan Nicula</title>
+<meta name="description" content="Bogdan Nicula — ML researcher and engineer: NLP for data-scarce problems, model quantization and sparsity.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbf8f3;
+    --fg: #22201c;
+    --muted: #6b665d;
+    --line: #e6e0d5;
+    --accent: #c2410c;
+    --chip: #f1ebe0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17161a;
+      --fg: #ece8e1;
+      --muted: #a39d93;
+      --line: #2e2c31;
+      --accent: #fb923c;
+      --chip: #24222a;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font: 17px/1.65 Inter, system-ui, sans-serif;
+  }
+  main { max-width: 680px; margin: 0 auto; padding: 72px 20px 96px; }
+  h1, h2 { font-family: Fraunces, Georgia, serif; font-weight: 600; line-height: 1.15; }
+  h1 { font-size: clamp(2.4rem, 7vw, 3.4rem); margin: 0 0 16px; letter-spacing: -0.02em; }
+  h2 { font-size: 1.5rem; margin: 64px 0 20px; }
+  h2::before { content: "~ "; color: var(--accent); font-family: "JetBrains Mono", monospace; font-weight: 400; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  .lede { font-size: 1.2rem; }
+  .muted { color: var(--muted); }
+  .mono { font-family: "JetBrains Mono", monospace; font-size: 0.85em; }
+
+  .links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+  .links a {
+    text-decoration: none; color: var(--fg);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 6px 14px; font-size: 0.9rem;
+  }
+  .links a:hover { border-color: var(--accent); color: var(--accent); }
+
+  .cards { display: grid; gap: 14px; }
+  .card { border: 1px solid var(--line); border-radius: 14px; padding: 18px 20px; }
+  .card h3 { margin: 0 0 6px; font-size: 1.05rem; }
+  .card p { margin: 0; color: var(--muted); }
+  .tags { margin-top: 10px; display: flex; flex-wrap: wrap; gap: 6px; }
+  .tags span { background: var(--chip); border-radius: 6px; padding: 2px 8px; font-size: 0.78rem; font-family: "JetBrains Mono", monospace; }
+
+  .timeline { list-style: none; padding: 0; margin: 0; }
+  .timeline li { display: grid; grid-template-columns: 104px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .timeline li:first-child { border-top: 0; }
+  .timeline .when { color: var(--muted); font-family: "JetBrains Mono", monospace; font-size: 0.82rem; padding-top: 3px; }
+  .timeline strong { font-weight: 500; }
+  @media (max-width: 520px) {
+    .timeline li { grid-template-columns: 1fr; gap: 2px; }
+  }
+
+  .papers { padding-left: 20px; margin: 0; }
+  .papers li { margin-bottom: 12px; }
+
+  footer { margin-top: 72px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.85rem; }
+</style>
+</head>
+<body>
+<main>
+
+  <p class="mono muted">hello, world</p>
+  <h1>Hi, I'm Bogdan.</h1>
+  <p class="lede">I make big neural networks smaller and faster, without making them dumber.</p>
+  <p class="muted">PhD in Computer Science, Applied Scientist in Bucharest, and about eight years of teaching models to do more with less.</p>
+
+  <div class="links">
+    <a href="mailto:bogdan.nicula22@gmail.com">Email</a>
+    <a href="https://github.com/nbogdan">GitHub</a>
+    <a href="https://www.linkedin.com/in/bogdan-nicula-32a7924b/">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?user=Sx9kQvgAAAAJ&amp;hl=en">Google Scholar</a>
+  </div>
+
+  <h2>What I work on</h2>
+  <div class="cards">
+    <div class="card">
+      <h3>ML when data is scarce</h3>
+      <p>My PhD research: building NLP models for niche educational tasks, like judging how well a student understood a text or how good a paraphrase is, where labelled data is scarce and you can't just throw more examples at the problem. Transfer learning, careful fine-tuning and LLMs do the heavy lifting.</p>
+      <div class="tags"><span>transfer learning</span><span>fine-tuning</span><span>LLMs</span><span>educational NLP</span></div>
+    </div>
+    <div class="card">
+      <h3>Quantization &amp; sparsity</h3>
+      <p>Making big models small: taking LLMs down to INT8, INT4 and even ternary weights, and pruning the weights that don't pull their weight, structured and unstructured, so models fit on edge hardware without losing accuracy.</p>
+      <div class="tags"><span>PTQ</span><span>QAT</span><span>mixed precision</span><span>structured sparsity</span><span>edge inference</span></div>
+    </div>
+  </div>
+
+  <!-- Uncomment once your first public project is up
+  <h2>Things I've built in the open</h2>
+  <div class="cards">
+    <div class="card">
+      <h3><a href="https://github.com/nbogdan/REPO">Project name</a></h3>
+      <p>One sentence on what it does and the headline result.</p>
+      <div class="tags"><span>vLLM</span><span>INT4</span></div>
+    </div>
+  </div>
+  -->
+
+  <h2>How I got here</h2>
+  <ul class="timeline">
+    <li><span class="when">2024 – now</span><div><strong>Amazon</strong>, Applied Scientist. Low-bit quantization for large language models.</div></li>
+    <li><span class="when">2018 – 2024</span><div><strong>Xperi</strong>, ML Engineer. Six years of model compression for edge devices, including compression libraries that other product teams actually adopted.</div></li>
+    <li><span class="when">2017 – 2018</span><div><strong>Gameloft</strong>, ML Engineer. NLP and text classification pipelines, from raw data to trained model.</div></li>
+    <li><span class="when">2015 – 2017</span><div><strong>Softwire</strong>, Software Engineer. Full-stack life before ML: Scala, Akka, Neo4j and Node.js.</div></li>
+    <li><span class="when">2013 – 2015</span><div><strong>Politehnica Bucharest</strong>, Teaching Assistant. Taught first-years C and second-years algorithms.</div></li>
+  </ul>
+
+  <h2>School</h2>
+  <p>All three degrees at University Politehnica of Bucharest: a BSc in Computer Science, an MSc in AI, then a <strong>PhD in Computer Science</strong> (2023), where I taught machines to assess how well students understand what they read.</p>
+
+  <h2>A few papers</h2>
+  <ol class="papers">
+    <li><a href="https://www.mdpi.com/2078-2489/14/10/567">Automated assessment of comprehension strategies from self-explanations using LLMs</a> <span class="muted">— Information, 2023</span></li>
+    <li><a href="https://www.mdpi.com/2073-431X/10/12/166">Automated paraphrase quality assessment using language models and transfer learning</a> <span class="muted">— Computers, 2021</span></li>
+    <li>Improving deep learning for multiple choice question answering with candidate contexts <span class="muted">— ECIR, 2018</span></li>
+  </ol>
+  <p class="muted">The full list is on <a href="https://scholar.google.com/citations?user=Sx9kQvgAAAAJ&amp;hl=en">Google Scholar</a>.</p>
+
+  <footer>
+    Based in Bucharest, Romania. Happy to talk about quantization, efficient inference, or anything that makes models run on less.
+  </footer>
+
+</main>
+</body>
+</html>
